@@ -7,7 +7,7 @@ const WaveParticles = () => {
     
     const textureParticle = useLoader(THREE.TextureLoader, "../../public/textures/particle.png");
 
-    const size = 160; // resolución del campo
+    const size = 160; 
     const separation = 0.25;
     const count = size * size;
 
@@ -26,7 +26,6 @@ const WaveParticles = () => {
             positions[i3 + 1] = 0;
             positions[i3 + 2] = (y - size / 2) * separation;
 
-            // Color por posición (no random)
             color.setHSL(x / size, 1, 0.6);
 
             colors[i3]     = color.r;
@@ -49,7 +48,6 @@ const WaveParticles = () => {
         for (let y = 0; y < size; y++) {
             const i3 = i * 3;
 
-            // Onda matemática viva
             pos[i3 + 1] = Math.sin((x + time * 4) * 0.3) *  Math.cos((y + time * 4) * 0.3) *  2.2; i++;
         }
         }
