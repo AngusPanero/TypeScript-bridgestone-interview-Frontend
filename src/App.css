@@ -5,3 +5,36 @@ html, body, #root {
     background: radial-gradient(circle at top, #0b0214, #000);
     overflow: hidden;
 }
+
+.three-background { z-index: 0; }
+.ui-layer         { z-index: 10; }
+
+.app-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.three-background {
+position: fixed;
+inset: 0;
+z-index: 0;
+}
+
+.ui-layer {
+position: fixed;
+inset: 0;
+z-index: 10;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+pointer-events: none;
+}
+
+.ui-layer > * {
+pointer-events: auto;
+}
+

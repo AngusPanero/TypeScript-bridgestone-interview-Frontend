@@ -65,7 +65,7 @@ const WaveParticles = () => {
             <bufferAttribute attach="attributes-color" args={[colors, 3]} />
         </bufferGeometry>
 
-        <pointsMaterial size={0.045} map={textureParticle} vertexColors transparent opacity={0.95} depthWrite={false} blending={THREE.AdditiveBlending} />
+        <pointsMaterial size={0.095} map={textureParticle} vertexColors transparent opacity={0.95} depthWrite={false} blending={THREE.AdditiveBlending} />
         </points>
     );
 };
